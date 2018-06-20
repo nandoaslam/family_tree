@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PrincipalController">
+   <children>
+      <AnchorPane id="AnchorPane" layoutY="-28.0" prefHeight="703.0" prefWidth="1200.0" style="-fx-background-color: #20120F;">
+         <children>
+            <AnchorPane layoutY="13.0" prefHeight="65.0" prefWidth="1200.0" style="-fx-background-color: #8C2B27;">
+               <children>
+                  <Label layoutX="354.0" layoutY="23.0" prefHeight="45.0" prefWidth="386.0" text="Minha Árvore Genealógica" textFill="WHITE">
+                     <font>
+                        <Font size="33.0" />
+                     </font>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </Label>
+                  <MaterialDesignIconView fx:id="btclose" glyphName="WINDOW_CLOSE" layoutX="1164.0" layoutY="43.0" size="30" text="" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="18.0" layoutY="76.0" prefHeight="591.0" prefWidth="208.0" style="-fx-background-color: #8C2B27;">
+               <children>
+                  <Button fx:id="btCadFamiliar" alignment="BOTTOM_CENTER" layoutY="107.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="208.0" style="-fx-background-color: #8C2B27;" text="Adcionar membro familiar" textAlignment="CENTER" textFill="WHITE">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets bottom="20.0" left="40.0" />
+                     </padding>
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="btVisualizar" alignment="BOTTOM_CENTER" layoutY="244.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="199.0" style="-fx-background-color: #8C2B27;" text="Visualizar Árvore" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="20.0" left="40.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="btnDeletar" alignment="BOTTOM_CENTER" layoutY="176.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="199.0" style="-fx-background-color: #8C2B27;" text="Deletar Membro familiar" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="20.0" left="40.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="btSair" alignment="BOTTOM_CENTER" layoutY="319.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="182.0" style="-fx-background-color: #8C2B27;" text="Sair" textFill="WHITE">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="20.0" left="40.0" />
+                     </padding>
+                  </Button>
+                  <FontAwesomeIconView glyphName="USER_PLUS" layoutX="8.0" layoutY="146.0" size="30" text="" />
+                  <FontAwesomeIconView glyphName="TRASH" layoutX="13.0" layoutY="215.0" size="30" text="" />
+                  <FontAwesomeIconView glyphName="TREE" layoutX="12.0" layoutY="283.0" size="30" />
+                  <MaterialDesignIconView glyphName="WALK" layoutX="10.0" layoutY="359.0" size="30" />
+                  <Label fx:id="idconta" layoutX="56.0" layoutY="60.0" prefHeight="21.0" prefWidth="142.0" text="Editar dados da conta" textFill="WHITE">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </Label>
+                  <FontAwesomeIconView glyphName="USER" layoutX="13.0" layoutY="81.0" size="30" />
+               </children>
+            </AnchorPane>
+            <Label layoutX="585.0" layoutY="90.0" text="Parentes Cadastrados" textFill="WHITE">
+               <font>
+                  <Font size="26.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtPesquisar" layoutX="585.0" layoutY="145.0" prefHeight="29.0" prefWidth="394.0" promptText="Localizar membro da família..." />
+            <Label layoutX="461.0" layoutY="151.0" prefHeight="17.0" prefWidth="100.0" text="Procurar pessoa:" textFill="WHITE" />
+            <FontAwesomeIconView glyphName="SEARCH" layoutX="960.0" layoutY="166.0" size="20" />
+            <TableView fx:id="Tabela" layoutX="314.0" layoutY="193.0" prefHeight="389.0" prefWidth="780.0">
+               <columns>
+                  <TableColumn fx:id="clnNome" prefWidth="384.0" resizable="false" text="Nome" />
+                  <TableColumn fx:id="clnParentesco" prefWidth="320.0" resizable="false" text="Parentesco" />
+               </columns>
+            </TableView>
+            <Label layoutX="470.0" layoutY="597.0" text="Modificar nome do Parente" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNomeParente" layoutX="470.0" layoutY="630.0" prefHeight="25.0" prefWidth="408.0" />
+            <Button fx:id="btSalvarParente" layoutX="900.0" layoutY="630.0" mnemonicParsing="false" text="Salvar" />
+            <Label fx:id="idparent" layoutX="433.0" layoutY="629.0" prefHeight="30.0" prefWidth="28.0" />
+            <Button fx:id="btatualizar" layoutX="1007.0" layoutY="147.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="79.0" text="Atualizar" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
